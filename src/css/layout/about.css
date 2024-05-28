@@ -75,9 +75,10 @@ span.color-grey {
 .description-button:hover {
     cursor: pointer;
 }
-.btn-svg use{
+.btn-svg{
     margin: auto;
     display: block;
+    transition: all 0.5s ease-in-out;
 }
 .svg-flip .btn-svg{
     transform: rotateZ(180deg);
