@@ -5,19 +5,56 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/base/main.css" />
   </head>
-  <body>
+  <body class="container">
     <load ="partials/header.html" />
+    <load ="partials/menu.html" />
+    <load ="partials/hero.html" />
+    <load ="partials/about.html" />
+    <load ="partials/skills.html" />
+    <load ="partials/benefits.html" />
+    <load ="partials/projects.html" />
+    <load ="partials/faq.html" />
+    <load ="partials/covers.html" />
+    <load ="partials/reviews.html" />
+    <load ="partials/works.html" />
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
+    <section class="section">
+      <h1>Test massage for the <span class="color text-color">World!</span></h1>
     </section>
+    <section class="section">
+      <span class="section-name">Benefits of working with me</span>
+      <button class="main-btn js-change-theme">
+        <div class="btn-bg bg-color"></div>
+        <span>Click me</span>
+      </button>
+      <button class="main-btn js-change-theme">
+        <div class="btn-bg bg-color"></div>
+        <span>Click me</span>
+      </button>
+      <button class="main-btn js-change-theme">
+        <div class="btn-bg bg-color"></div>
+        <span>Click me</span>
+      </button>
+      <button class="main-btn js-change-theme">
+        <div class="btn-bg bg-color"></div>
+        <span>Click me</span>
+      </button>
+      <button class="main-btn js-change-theme">
+        <div class="btn-bg bg-color"></div>
+        <span>Click me</span>
+      </button>
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+      <select name="theme-color" class="theme-color">
+        <option value="red">Red</option>
+        <option value="lime">Lime</option>
+        <option value="blue">Blue</option>
+        <option value="tomato">Tomato</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+      </select>
+    </section>
 
     <script type="module" src="./main.js"></script>
   </body>
