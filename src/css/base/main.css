@@ -21,6 +21,7 @@
 body {
   font-family: 'Regular', sans-serif;
   color: var(--text);
+  background: var(--bg-main);
 }
 
 .section {
@@ -43,7 +44,7 @@ body {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .section {
     margin-bottom: 64px;
   }
