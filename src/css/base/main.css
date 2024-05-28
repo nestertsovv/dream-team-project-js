@@ -19,7 +19,8 @@
 }
 
 body {
-  font-family: 'Regular';
+  font-family: 'Regular', sans-serif;
+  color: var(--text);
 }
 
 .section {
@@ -49,7 +50,7 @@ body {
 }
 
 span.color {
-  color: var(--red);
+  color: var(--main-color);
 }
 
 .main-btn {
@@ -66,9 +67,10 @@ span.color {
 }
 .main-btn .btn-bg {
   padding: 18px 24px;
-  background: var(--red);
+  background: var(--main-color);
   border-radius: 60px;
   min-width: 165px;
+  cursor: pointer;
   transition: all 0.25s ease;
 }
 .main-btn span {
@@ -77,8 +79,5 @@ span.color {
 }
 
 .main-btn:hover .btn-bg {
-  opacity: 0.5;
-}
-
-.theme-color-red {
+  opacity: 0.8;
 }

@@ -4,7 +4,6 @@
   width: 1440px;
   padding: 0 32px;
   margin: 0 auto;
-  overflow: hidden;
   background: var(--bg-main);
 }
 
