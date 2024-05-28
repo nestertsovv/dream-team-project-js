@@ -75,7 +75,6 @@ span.color {
 }
 .main-btn span {
   position: absolute;
-  transform: translate(-50% -50%);
 }
 
 .main-btn:hover .btn-bg {
