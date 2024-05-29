@@ -49,6 +49,7 @@ span.color-grey {
 .description-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -112,14 +113,13 @@ span.color-grey {
     overflow-x: hidden;
 }
 .languages-wraper {
-    margin: 96px 32px 0;
+    margin: 96px 0 0;
     display: flex;
 }
 
 .languages ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
 .languages li {
@@ -138,23 +138,23 @@ span.color-grey {
     background-color: transparent;
     border: 1px solid #FAFAFA33;
     border-radius: 50%;
-    transition: all 0.7s;
+    transition: all 0.25s;
 }
-
-.languages li:hover {
-    width: 200px;
-    height: 200px;
-    border: 1px solid var(--main-color);
+.languages li.swiper-slide-active {
     background: var(--main-color);
 }
 
 .languages-next-div {
     height: 200px;
+    width: 205px;
     background: var(--bg-main);
     z-index: 3;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+.languages-next-btn {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1439px) {
