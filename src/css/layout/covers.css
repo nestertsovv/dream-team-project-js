@@ -7,7 +7,7 @@
   margin: auto;
   min-height: 504px;
   background-color: var(--bg-main);
-  background-image: url('../src/img/covers/backgrounds/covers-background-mobile-1x-min.png');
+  background-image: url('../../img/covers/backgrounds/covers-background-mobile-1x-min.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -73,7 +73,7 @@
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .section-covers {
     min-height: 960px;
-    background-image: url('../img/covers/backgrounds/covers-background-tablet-1x-min.png');
+    background-image: url('../../img/covers/backgrounds/covers-background-tablet-1x-min.png');
   }
 
   .content {
@@ -104,7 +104,7 @@
   .section-covers {
     min-height: 960px;
     min-width: 1440px;
-    background-image: url('../img/covers/backgrounds/covers-background-desktop-1x-min.png');
+    background-image: url('../../img/covers/backgrounds/covers-background-desktop-1x-min.png');
   }
 
   .content {
