@@ -4,13 +4,11 @@
   width: 1440px;
   padding: 0 32px;
   margin: 0 auto;
-  background: var(--bg-main);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .container {
     width: 768px;
-    background: var(--blue);
   }
 }
 
@@ -18,7 +16,6 @@
   .container {
     min-width: 320px;
     width: 100%;
-    background: var(--tomato);
     padding: 0 16px;
   }
 }
