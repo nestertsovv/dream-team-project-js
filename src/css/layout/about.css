@@ -70,6 +70,7 @@ span.color-grey {
     height: 40px;
     padding: 0;
     margin: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .description-button:hover {
@@ -107,8 +108,11 @@ span.color-grey {
 }
 
 .languages {
-    margin: 96px 32px 0;
     overflow-x: hidden;
+}
+.languages-wraper {
+    margin: 96px 32px 0;
+    display: flex;
 }
 
 .languages ul {
@@ -125,21 +129,31 @@ span.color-grey {
     letter-spacing: -0.02em;
     text-align: left;
 
-    width: 198px;
-    height: 198px;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     border: 1px solid #FAFAFA33;
     border-radius: 50%;
+    transition: all 0.7s;
 }
 
 .languages li:hover {
     width: 200px;
     height: 200px;
-    border: 0px solid #000;
+    border: 1px solid var(--main-color);
     background: var(--main-color);
+}
+
+.languages-next-div {
+    height: 200px;
+    background: var(--bg-main);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 @media screen and (max-width: 1439px) {
@@ -160,12 +174,19 @@ span.color-grey {
         width: 100%;
     }
 
-    .languages {
+    .languages-wraper {
         margin: 64px 0 0;
     }
     .languages ul {
         justify-content: normal;
     }
+    .languages-next-div {
+        width: 206px;
+    }
+    .languages-next-div {
+        width: 206px;
+    }
+    
 }
 @media screen and (max-width: 767px) {
     .description {
@@ -183,9 +204,18 @@ span.color-grey {
 
     .introduction-box{
         height: 500px;
+        overflow: hidden;
+    }
+    .introduction-box img {
+        width: 100%;
     }
     .introduction-text h3 {
         margin: 32px;
+    }
+    
+    .languages-wraper {
+        margin: 32px 0;
+        display: flex;
     }
     .languages li {
         font-family: "Medium";
@@ -194,9 +224,22 @@ span.color-grey {
         line-height: 24px;
         letter-spacing: -0.02em;
         text-align: left;
-        width: 128px; height: 128px;
+        width: 130px; height: 130px;
     }
     .languages li:hover {
         width: 130px; height: 130px;
+    }
+    .languages-next-div {
+        max-width: calc(100% - (130px * 2));
+        min-width: calc(100% - (130px * 2));
+        height: 130px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .languages-next-btn {
+        transform: scale(0.6, 0.6);
+    }
+    .languages-next-div {
+        justify-content: flex-start;
     }
 }
