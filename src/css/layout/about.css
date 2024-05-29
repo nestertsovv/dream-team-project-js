@@ -139,7 +139,7 @@ span.color-grey {
     width: 200px;
     height: 200px;
     border: 0px solid #000;
-    background: var(--red);
+    background: var(--main-color);
 }
 
 @media screen and (max-width: 1439px) {
