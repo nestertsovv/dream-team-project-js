@@ -51,6 +51,7 @@ span.color-grey {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .description-item h3 {
@@ -72,7 +73,6 @@ span.color-grey {
     height: 40px;
     padding: 0;
     margin: 0;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .description-button:hover {
@@ -113,7 +113,7 @@ span.color-grey {
     overflow-x: hidden;
 }
 .languages-wraper {
-    margin: 96px 0 0;
+    margin: 96px 32px 0;
     display: flex;
 }
 
@@ -146,7 +146,7 @@ span.color-grey {
 
 .languages-next-div {
     height: 200px;
-    width: 205px;
+    width: 149px;
     background: var(--bg-main);
     z-index: 3;
     display: flex;
@@ -168,9 +168,6 @@ span.color-grey {
     .description {
         margin-top: 64px;
     }
-    .description-li {
-        padding: 20px 0 32px;
-    }
     .description-content>ul {
         width: 100%;
     }
@@ -188,6 +185,9 @@ span.color-grey {
 @media screen and (max-width: 767px) {
     .description {
         margin-top: 32px;
+    }
+    .description-li {
+        padding: 20px 0;
     }
 
     .introduction-text h3 {
