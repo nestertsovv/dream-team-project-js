@@ -1,7 +1,3 @@
-.hide {
-    display: none;
-}
-
 .bg-color {
     background: var(--main-color);
 }

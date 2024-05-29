@@ -1,16 +1,11 @@
 /* #region css mobile*/
 #covers {
-  margin: auto;
   min-height: 504px;
   background-color: var(--bg-main);
   background-image: url('../../img/covers/backgrounds/covers-background-mobile-1x-min.png');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
-
-.visually-hidden {
-  visibility: hidden;
 }
 
 .content {
