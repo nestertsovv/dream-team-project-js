@@ -27,6 +27,12 @@ new Swiper(".languages", {
         320: {
             slidesPerView: 2,
         },
+        462: {
+            slidesPerView: 3,
+        },
+        592: {
+            slidesPerView: 4,
+        },
         768: {
             slidesPerView: 3,
         },
