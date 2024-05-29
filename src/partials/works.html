@@ -1,21 +1,67 @@
 <footer class="section">
-  <div class="container">
+  <div class="container works-wrapper">
     <div class="works-top-side">
-      <div class="works-slogan">
-        <p>
-          <span class="works-avatar">
-            <img src="../img/works/avatar.jpg" alt="avatar" /></span
-          >Let’s work together
-        </p>
-        <form>
-          <input type="email" name="email" placeholder="clients@gmail.com" />
-          <input type="text" name="comment" placeholder="comments" />
-          <button type="submit">Send</button>
-        </form>
+      <div class="works-wrapper-title">
+        <picture class="avatar">
+          <source
+            srcset="../img/works/avatar.png 1x, ../img/works/avatar-2x.png 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ../img/works/avatar-mob-1x.png 1x,
+              ../img/works/avatar-mob-2x.png 2x
+            "
+            media="(max-width:767px)"
+          />
+          <img
+            width="70"
+            height="70"
+            class="works-avatar"
+            src="../img/works/avatar.png"
+            alt="avatar"
+          />
+        </picture>
+        <h2 class="works-title">
+          &#160;&#160;&#160;&#160;&#160;&#160;Let’s
+          <span class="color">work</span><br />
+          together
+        </h2>
       </div>
+      <form class="works-form">
+        <input
+          class="works-input email-input"
+          type="email"
+          name="email"
+          placeholder="clients@gmail.com"
+        />
+        <input
+          class="works-input comment-input"
+          type="text"
+          name="comment"
+          placeholder="comments"
+        />
+        <button class="works-btn bg-color" type="submit">Send</button>
+      </form>
     </div>
     <div class="works-bottom-side">
-      <address></address>
+      <address class="works-adress">
+        <ul class="works-contacts">
+          <li class="works-contact-item">
+            <a
+              class="works-contacts-link"
+              href="mailto:lloydjefferson@gmail.com"
+            >
+              lloydjefferson@gmail.com
+            </a>
+          </li>
+          <li class="works-contact-item">
+            <a class="works-contacts-link" href="tel:+3801111111111">
+              +380 11 1111 11 11
+            </a>
+          </li>
+        </ul>
+      </address>
     </div>
   </div>
 </footer>
