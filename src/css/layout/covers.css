@@ -1,15 +1,16 @@
 /* #region css mobile*/
-.section-covers {
-  overflow: hidden;
-}
-
-.section-covers {
+#covers {
   margin: auto;
   min-height: 504px;
   background-color: var(--bg-main);
-  background-image: url('../src/img/covers/backgrounds/covers-background-mobile-1x-min.png');
+  background-image: url('../../img/covers/backgrounds/covers-background-mobile-1x-min.png');
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  visibility: hidden;
 }
 
 .content {
@@ -71,9 +72,9 @@
 /* #region media tablet */
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .section-covers {
+  #covers {
     min-height: 960px;
-    background-image: url('../img/covers/backgrounds/covers-background-tablet-1x-min.png');
+    background-image: url('../../img/covers/backgrounds/covers-background-tablet-1x-min.png');
   }
 
   .content {
@@ -101,10 +102,10 @@
 /* #region media desctop */
 
 @media screen and (min-width: 1440px) {
-  .section-covers {
+  #covers {
     min-height: 960px;
     min-width: 1440px;
-    background-image: url('../img/covers/backgrounds/covers-background-desktop-1x-min.png');
+    background-image: url('../../img/covers/backgrounds/covers-background-desktop-1x-min.png');
   }
 
   .content {
