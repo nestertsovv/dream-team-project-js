@@ -1,0 +1,96 @@
+.benefits-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefits-wrapper .w50 {
+  flex-basis: 50%;
+}
+.benefit-squares {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px 38px;
+}
+.benefits-wrapper .w50 .w50-into {
+  flex-basis: calc(50% - 16px);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: var(--bg-cards);
+  padding: 24px;
+  margin: 0 8px 16px;
+}
+.w50-into .benefit-square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--main-color);
+  margin-bottom: 64px;
+}
+.w50-into .benefit-icon {
+  width: 24px;
+  height: 24px;
+}
+.w50-into:nth-child(1) .benefit-icon {
+  background: url('../../img/benefits/sprite_icons.svg') 0 center no-repeat;
+}
+.w50-into:nth-child(2) .benefit-icon {
+  background: url('../../img/benefits/sprite_icons.svg') -24px center no-repeat;
+}
+.w50-into:nth-child(3) .benefit-icon {
+  background: url('../../img/benefits/sprite_icons.svg') -48px center no-repeat;
+}
+.w50-into:nth-child(4) .benefit-icon {
+  background: url('../../img/benefits/sprite_icons.svg') -72px center no-repeat;
+}
+.benefit-title {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text);
+  font-family: 'SemiBold';
+  margin-bottom: 8px;
+}
+.benefit-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(250, 250, 250, 0.6);
+  font-family: 'Regular';
+}
+
+.main-btn.btn-benefits .btn-bg {
+  background: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+.main-btn.btn-benefits:hover .btn-bg {
+  border-color: rgba(250, 250, 250, 0.4);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .benefits-wrapper .w50 {
+    flex-basis: 100%;
+  }
+  .benefits-wrapper .w50:first-of-type {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .benefits-wrapper .w50 {
+    flex-basis: 100%;
+  }
+  .benefits-wrapper .w50:first-of-type {
+    margin-bottom: 32px;
+  }
+  .benefits-wrapper .w50 .w50-into {
+    flex-basis: 100%;
+    margin: 0 0 16px;
+  }
+  .benefits-wrapper .w50 .w50-into:last-of-type {
+    margin: 0;
+  }
+  .benefit-squares {
+    margin: 0 0 32px;
+  }
+}
