@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 
 new Accordion('.description', {
     elementClass: "description-li",
-    triggerClass: "description-button",
+    triggerClass: "description-item",
     panelClass: "description-content",
     activeClass: "svg-flip"
 }).open(0);

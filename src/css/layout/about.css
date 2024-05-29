@@ -49,6 +49,7 @@ span.color-grey {
 .description-item {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .description-item h3 {
