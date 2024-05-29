@@ -49,7 +49,9 @@ span.color-grey {
 .description-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .description-item h3 {
@@ -71,7 +73,6 @@ span.color-grey {
     height: 40px;
     padding: 0;
     margin: 0;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .description-button:hover {
@@ -119,7 +120,6 @@ span.color-grey {
 .languages ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
 .languages li {
@@ -138,23 +138,23 @@ span.color-grey {
     background-color: transparent;
     border: 1px solid #FAFAFA33;
     border-radius: 50%;
-    transition: all 0.7s;
+    transition: all 0.25s;
 }
-
-.languages li:hover {
-    width: 200px;
-    height: 200px;
-    border: 1px solid var(--main-color);
+.languages li.swiper-slide-active {
     background: var(--main-color);
 }
 
 .languages-next-div {
     height: 200px;
+    width: 149px;
     background: var(--bg-main);
     z-index: 3;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+.languages-next-btn {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1439px) {
@@ -167,9 +167,6 @@ span.color-grey {
 
     .description {
         margin-top: 64px;
-    }
-    .description-li {
-        padding: 20px 0 32px;
     }
     .description-content>ul {
         width: 100%;
@@ -188,6 +185,9 @@ span.color-grey {
 @media screen and (max-width: 767px) {
     .description {
         margin-top: 32px;
+    }
+    .description-li {
+        padding: 20px 0;
     }
 
     .introduction-text h3 {

@@ -31,7 +31,7 @@ new Swiper(".languages", {
             slidesPerView: 3,
         },
         1440: {
-            slidesPerView: 'auto',
+            slidesPerView: 6,
         },
     },
 });
