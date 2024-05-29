@@ -54,17 +54,6 @@ span.color-grey {
     -webkit-tap-highlight-color: transparent;
 }
 
-.description-item h3 {
-    font-family: 'SemiBold';
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.02em;
-    color: #FAFAFA66;
-
-    margin: 0;
-}
-
 .description-button {
     border-radius: 50%;
     border: 1px solid #FAFAFA33;
