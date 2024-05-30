@@ -7,7 +7,7 @@ import {
 } from './closeModal';
 
 const formElem = document.querySelector('.js-works-form');
-const modalEl = document.querySelector('#modal');
+export const modalEl = document.querySelector('#modal');
 
 formElem.addEventListener('submit', onSubmit);
 
@@ -37,27 +37,10 @@ async function onSubmit(e) {
     modalBtn.addEventListener('click', onBtnCloseModal);
     modalEl.addEventListener('click', onBackdropCloseModal);
     document.addEventListener('keydown', onEscCloseModal);
+    document.body.style.overflow = 'hidden';
   } catch (error) {
     console.log(error);
   } finally {
     e.target.reset();
-  }
-}
-
-function onBtnCloseModal(e) {
-  modalEl.classList.remove('is-open');
-}
-
-function onBackdropCloseModal(e) {
-  if (e.target !== e.currentTarget) {
-    return;
-  }
-  modalEl.classList.remove('is-open');
-}
-
-function onEscCloseModal(e) {
-  if (e.key === 'Escape') {
-    modalEl.classList.remove('is-open');
-    document.removeEventListener('keydown', onEscCloseModal);
   }
 }
