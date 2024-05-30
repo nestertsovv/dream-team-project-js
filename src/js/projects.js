@@ -22,7 +22,6 @@ imagesProject.forEach((el, indx) => {
   el.previewMob1x = `${IMG_BASE_URL}img-mob/img${indx + 1}`;
   el.previewDesc1x = `${IMG_BASE_URL}img-desk-tab/img${indx + 1}`;
 });
-console.log(imagesProject);
 //!=======================================================================
 
 function imgTemplate(img) {
