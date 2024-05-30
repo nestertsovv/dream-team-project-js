@@ -90,6 +90,7 @@
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1439px) {
   .works-input {
     width: 240px;
@@ -143,6 +144,17 @@
 .works-btn:hover,
 .works-btn:focus {
   opacity: 0.8;
+}
+.validation {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+}
+.small-text {
+  position: relative;
 }
 /* #endregion */
 /* #region Adress */
@@ -254,3 +266,45 @@
   color: rgba(250, 250, 250, 0.6);
 }
 /* #endregion */
+#modal-error {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+#modal-error.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.error-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  width: 330px;
+  height: 70px;
+  background-color: var(--bg-main);
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.error-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #e74a3b;
+}
+.error-message {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+}

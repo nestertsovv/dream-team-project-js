@@ -1,4 +1,4 @@
-<footer class="section">
+<footer class="section" id="works">
   <div class="container works-wrapper">
     <div class="works-top-side">
       <div class="works-wrapper-title">
@@ -31,19 +31,24 @@
       <form class="works-form js-works-form">
         <div class="small-text">
           <input
+            autocomplete="off"
             class="works-input email-input"
             type="email"
             name="email"
             placeholder="clients@gmail.com"
           />
-          <small class="succes hidden">Succes!</small>
+          <small class="validation"></small>
         </div>
-        <input
-          class="works-input comment-input"
-          type="text"
-          name="comment"
-          placeholder="comments"
-        />
+        <div class="small-text">
+          <input
+            autocomplete="off"
+            class="works-input comment-input"
+            type="text"
+            name="comment"
+            placeholder="comments"
+          />
+          <small class="validation"></small>
+        </div>
         <button class="works-btn bg-color" type="submit">Send</button>
       </form>
     </div>
@@ -68,14 +73,10 @@
     </div>
   </div>
 </footer>
-<div id="modal">
-  <div class="modal-message">
-    <button type="button" class="close-modal-btn js-modal-btn">
-      <svg class="modal-pict" width="24" height="24">
-        <use href="../img/icons.svg#icon-close"></use>
-      </svg>
-    </button>
-    <h4 class="modal-title">${title}</h4>
-    <p class="modal-descr">${message}</p>
+<div id="modal"></div>
+<div id="modal-error">
+  <div class="error-wrapper">
+    <h4 class="error-title">Error!</h4>
+    <p class="error-message">&#160;&#160;&#160;Form fields cannot be empty.</p>
   </div>
 </div>
