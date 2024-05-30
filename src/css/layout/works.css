@@ -216,6 +216,13 @@
   transform: translateX(-50%) translateY(-50%);
   text-align: center;
 }
+@media only screen and (max-width: 767px) {
+  .modal-message {
+    padding: 64px 32px;
+    width: 343px;
+    height: 276px;
+  }
+}
 .close-modal-btn {
   position: absolute;
   display: flex;
