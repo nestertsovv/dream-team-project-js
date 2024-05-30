@@ -84,9 +84,8 @@
 /* #region CROSS BUTTON */
 .mob-menu-closing-cross-btn {
   position: absolute;
-  top: 20px;
-  right: 0;
-
+  top: 10px;
+  right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
