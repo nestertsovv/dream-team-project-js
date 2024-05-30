@@ -1,93 +1,99 @@
+/* #region CONTAINER */
 .header {
-    width: 100%;
-    display: flex;
-    margin-top: 32px;
-    position: absolute;
-    z-index: 10;
+  width: 100%;
+  display: flex;
+  margin-top: 32px;
+  position: absolute;
+  z-index: 10;
 }
 div.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background: transparent;
 }
+/* #endregion CONTAINER*/
 
-.logo{
+/* #region LOGO */
+.logo {
   display: flex;
   gap: 8px;
 }
 .ava-img {
   border-radius: 18px;
 }
+/* #endregion LOGO*/
 
+/* #region NAV */
 nav {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+.menu-btn {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  font-weight: 500;
+  font-size: 16px;
+}
+.menu-list {
+  min-width: 100px;
+  display: none;
+  position: absolute;
+  top: 2.2em;
+  left: 50%;
+  transform: translate(-50%);
+
+  text-align: center;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu-link {
+  display: block;
+  padding: 0.3em;
+}
+.order-link {
+  font-size: 16px;
+}
+/* #endregion NAV*/
 
 /* #region BURGER BUTTON */
 .burger-btn {
-    position: absolute;
-    top: -20px;
-    right: -4px;
-  
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background: transparent;
-    padding: 40px;
+  position: absolute;
+  top: -30px;
+  right: -14px;
 
-    display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 40px;
+
+  display: none;
 }
 .burger-dash {
-    width: 30px;
-    height: 2px;
-    background-color: #fafafa;
-    border-radius: 1px;
-    margin-bottom: 12px;
+  width: 30px;
+  height: 2px;
+  background-color: #fafafa;
+  border-radius: 1px;
+  margin-bottom: 12px;
 }
-
 /* #endregion BURGER BUTTON*/
 
+/* #region MEDIA */
 @media screen and (max-width: 767px) {
-    nav {
-        display: none;
-    }
-    button.main-btn.header-order-btn {
-        display: none;
-    }
-    .burger-btn {
-        display: block;
-    }
-  }
-
-.menu-btn {
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-    font-weight: 500;
-    font-size: 16px;
-}
-.menu-list {
-    min-width: 100px;
+  nav {
     display: none;
-    position: absolute;
-    top: 2.2em;
-    left: 50%;
-    transform: translate(-50%);
-
-    text-align: center;
-    flex-direction: column;
-    gap: 4px;
-}
-.menu-link {
+  }
+  button.main-btn.header-order-btn {
+    display: none;
+  }
+  .burger-btn {
     display: block;
-    padding: 0.3em;
+  }
+  .order-link {
+    font-size: 14px;
+  }
 }
-
-/* ----------------------- */
-
-.is-open {
-    display: flex;
-}
+/* #endregion MEDIA*/
