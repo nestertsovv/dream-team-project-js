@@ -3,22 +3,13 @@ const refs = {
   select: document.querySelector('.theme-color'),
 };
 
-const colorsBG = [
-  '#9db425',
-  '#005d7c',
-  '#786bcb',
-  '#e64f79',
-  '#9a4360',
-  '#fe902b'
-];
-
-const colorsText = [
-  '#acc720',
-  '#147da1',
-  '#9679f8',
-  '#f35480',
-  '#9a4360',
-  '#ff8514'
+const colors = [
+  '#c6e327',
+  '#ed3b44',
+  '#0041e8',
+  '#e6533c',
+  '#2b4441',
+  '#ff7f08',
 ];
 
 const classBgColor = '.bg-color';
@@ -33,10 +24,10 @@ function onChangeColor(e) {
   const colorArr = document.querySelectorAll(classTextColor);
 
   bgArr.forEach(color => {
-    color.style.setProperty('--main-color', colorsBG[value]);
+    color.style.setProperty('--main-color', colors[value]);
   });
 
   colorArr.forEach(color => {
-    color.style.setProperty('--main-color-text', colorsText[value]);
+    color.style.setProperty('--main-color', colors[value]);
   });
 }
