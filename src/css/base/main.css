@@ -24,6 +24,11 @@ body {
   background: var(--bg-main);
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .section {
   margin-bottom: 164px;
 }
@@ -44,7 +49,7 @@ body {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .section {
     margin-bottom: 64px;
   }
@@ -80,4 +85,14 @@ span.color {
 
 .main-btn:hover .btn-bg {
   opacity: 0.8;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.is-open {
+  display: flex;
 }
