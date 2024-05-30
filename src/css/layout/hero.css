@@ -23,7 +23,7 @@
       rgba(0, 0, 0, 0.2) 2.33%,         /* 57% */ 
       rgba(127, 127, 127, 0.2) 8.33%    /* 100% */
     ),
-    linear-gradient(90deg, var(--main-color), var(--bg-main) 100%);
+    linear-gradient(90deg, var(--main-color-text), var(--bg-main) 100%);
   background-blend-mode: overlay;
   transform: translateX(-1.66%);
 }
@@ -124,7 +124,7 @@
         rgba(0, 0, 0, 0.2) 3.5%,
         rgba(127, 127, 127, 0.2) 12.5%
       ),
-      linear-gradient(90deg, var(--main-color), var(--bg-main) 100%);
+      linear-gradient(90deg, var(--main-color-text), var(--bg-main) 100%);
     background-blend-mode: overlay;
     transform: translateX(-2.5%);
   }
