@@ -1,6 +1,7 @@
 :root {
-  --main-color: #c6e327;
-  --red: #ed3b44;
+  --main-color: #9db425;
+  --main-color-text: #acc720;
+  /* --red: #ed3b44;
   --lime: #c6e327;
   --blue: #0041e8;
   --tomato: #e6533c;
@@ -12,7 +13,7 @@
   --blue-hover: #0137be;
   --tomato-hover: #b64433;
   --green-hover: #192927;
-  --orange-hover: #cd6809;
+  --orange-hover: #cd6809; */
 
   --bg-main: #1c1d20;
   --bg-cards: #242527;
