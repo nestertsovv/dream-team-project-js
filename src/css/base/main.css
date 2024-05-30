@@ -58,7 +58,7 @@ p {
 }
 
 span.color {
-  color: var(--main-color-text);
+  color: var(--main-color);
 }
 
 .main-btn {
