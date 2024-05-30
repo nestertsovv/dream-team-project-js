@@ -25,6 +25,9 @@ body {
   color: var(--text);
   background: var(--bg-main);
 }
+body.is-open {
+  overflow: hidden;
+}
 
 p {
   font-size: 16px;
@@ -98,8 +101,4 @@ span.color {
   visibility: hidden;
   height: 0;
   width: 0;
-}
-
-.is-open {
-  display: flex;
 }
