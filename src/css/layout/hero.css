@@ -105,6 +105,9 @@
   height: 55px;
   width: 55px;
 }
+.color-circle.active {
+  border-color: #fff;
+}
 /* #region COLORS*/
 .olive {
   background-color: #9db425;

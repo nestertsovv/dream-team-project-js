@@ -47,10 +47,15 @@ function onColorClick(e) {
   if (e.target.nodeName !== 'BUTTON') {
     return;
   }
+  const target = e.target;
   const value = e.target.value;
+  const active = ul.querySelector('.active');
 
   const bgArr = document.querySelectorAll(classBgColor);
   const colorArr = document.querySelectorAll(classTextColor);
+
+  active.classList.remove('active');
+  target.classList.add('active');
 
   bgArr.forEach(color => {
     color.style.setProperty('--main-color', colorsBG[value]);
