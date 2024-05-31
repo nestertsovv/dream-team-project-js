@@ -6,22 +6,24 @@ import {
   onEscCloseModal,
 } from './closeModal';
 import {
-  onValidationMail,
-  onValidationMessage,
+  onChangeForm,
   initValid,
   renderErrorMessage,
+  onClickEmailInput,
+  onClickCommentInput,
 } from './validation';
-import { validationEmail, validationMessage } from './validation';
 
 export const modalEl = document.querySelector('#modal');
+export const emailInput = document.querySelector('.email-input');
+export const messageInput = document.querySelector('.comment-input');
+export const btnEl = document.querySelector('.js-works-btn');
 const notificationEl = document.querySelector('#modal-error');
 const formElem = document.querySelector('.js-works-form');
-const emailInput = document.querySelector('.email-input');
-const messageInput = document.querySelector('.comment-input');
+const validEmail = document.querySelector('.js-small-email');
+const validComment = document.querySelector('.js-small-comment');
 
 formElem.addEventListener('submit', onSubmit);
-emailInput.addEventListener('blur', onValidationMail);
-messageInput.addEventListener('blur', onValidationMessage);
+formElem.addEventListener('input', onChangeForm);
 
 async function onSubmit(e) {
   e.preventDefault();
@@ -50,17 +52,20 @@ async function onSubmit(e) {
     modalEl.addEventListener('click', onBackdropCloseModal);
     document.addEventListener('keydown', onEscCloseModal);
     document.body.style.overflow = 'hidden';
+    initValid(validEmail);
+    initValid(validComment);
+    emailInput.value = '';
+    messageInput.value = '';
     e.target.reset();
   } catch (error) {
     notificationEl.classList.add('is-open');
-    notificationEl.innerHTML = renderErrorMessage();
-    const hideNotification = setTimeout(() => {
+    notificationEl.innerHTML = renderErrorMessage(error);
+    const hideNotification = setTimeout(async () => {
       notificationEl.classList.remove('is-open');
     }, 2000);
-
-    console.log(error);
   } finally {
-    initValid(validationEmail);
-    initValid(validationMessage);
+    btnEl.disabled = true;
+    emailInput.removeEventListener('click', onClickEmailInput);
+    messageInput.removeEventListener('click', onClickCommentInput);
   }
 }

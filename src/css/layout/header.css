@@ -26,12 +26,18 @@ div.header-content {
 
 /* #region NAV */
 nav {
+  /* width: 100px; */
+  /* height: 50px; */
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
-.menu-btn {
+button.menu-btn {
+  display: block;
+  width: 100px;
+  /* height: 50px; */
+  padding-bottom: 18px;
   text-decoration: underline;
   text-underline-offset: 0.2em;
   font-weight: 500;

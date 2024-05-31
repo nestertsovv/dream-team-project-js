@@ -8,11 +8,19 @@ nav.addEventListener('click', onNavClick);
 function onNavClick(evt) {
   if (evt.target === menu) {
     menuList.classList.toggle('is-open-menu');
+    evt.stopPropagation();
+    document.addEventListener('click', quitMenu);
     return;
   }
   if (evt.target.classList.contains('menu-link')) {
     menuList.classList.remove('is-open-menu');
   }
+}
+
+function quitMenu(e) {
+  if (e.target.nodeName === 'A') return;
+  menuList.classList.remove('is-open-menu');
+  document.removeEventListener('click', quitMenu);
 }
 
 // MENU MOBILE

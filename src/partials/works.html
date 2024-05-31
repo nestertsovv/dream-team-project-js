@@ -24,7 +24,7 @@
         </picture>
         <h2 class="works-title">
           &#160;&#160;&#160;&#160;&#160;&#160;Let’s
-          <span class="color">work</span><br />
+          <span class="color text-color">work</span><br />
           together
         </h2>
       </div>
@@ -33,11 +33,11 @@
           <input
             autocomplete="off"
             class="works-input email-input"
-            type="email"
+            type="text"
             name="email"
             placeholder="clients@gmail.com"
           />
-          <small class="validation"></small>
+          <small class="validation js-small-email" data-input="email"></small>
         </div>
         <div class="small-text">
           <input
@@ -47,9 +47,15 @@
             name="comment"
             placeholder="comments"
           />
-          <small class="validation"></small>
+          <small
+            class="validation js-small-comment"
+            data-input="comment"
+          ></small>
         </div>
-        <button class="works-btn bg-color" type="submit">Send</button>
+        <button class="works-btn main-btn js-works-btn" type="submit" disabled>
+          <div class="btn-bg bg-color"></div>
+          <span>Send</span>
+        </button>
       </form>
     </div>
     <div class="works-bottom-side">
