@@ -2,11 +2,9 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 import 'swiper/css/bundle';
-
-
 
 new Accordion('.description', {
     elementClass: "description-li",
@@ -16,10 +14,14 @@ new Accordion('.description', {
 }).open(0);
 
 new Swiper(".languages", {
-    modules: [Navigation],
+    modules: [Navigation, Keyboard],
     slidesPerView: 'auto',
     freeMode: true,
     loop: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
     navigation: {
         nextEl: ".languages-next-btn",
     },
@@ -27,13 +29,17 @@ new Swiper(".languages", {
         320: {
             slidesPerView: 2,
         },
+        462: {
+            slidesPerView: 3,
+        },
+        592: {
+            slidesPerView: 4,
+        },
         768: {
             slidesPerView: 3,
         },
         1440: {
-            slidesPerView: 'auto',
+            slidesPerView: 6,
         },
     },
 });
-
-
