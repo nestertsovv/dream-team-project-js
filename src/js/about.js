@@ -21,6 +21,7 @@ new Swiper(".languages", {
     keyboard: {
         enabled: true,
         onlyInViewport: true,
+        pageUpDown: false,
     },
     navigation: {
         nextEl: ".languages-next-btn",
