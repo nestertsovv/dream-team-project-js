@@ -61,9 +61,11 @@
 }
 
 .nw {
-  white-space: nowrap;
+  white-space: normal;
 }
-
+.arrow-icon {
+  transition: all 0.5s ease-in-out;
+}
 .arrow-icon-container {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
@@ -86,6 +88,9 @@
   #faq {
     padding-top: 48px;
     padding-bottom: 96px;
+  }
+  .nw {
+    white-space: nowrap;
   }
   .ac.faq-list-item {
     padding: 32px 0 24px;
