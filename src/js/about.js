@@ -7,7 +7,7 @@ import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css/bundle';
 
 const description = document.querySelector('.description');
-const languages = document.querySelector('.languages');
+const swiper = document.querySelector('.swiper');
 
 const descriptionList = [
   {
@@ -47,13 +47,13 @@ const languagesList = [
 ];
 
 function renderDescrtiption() {
-  let innerHTML = '<ul class="swiper-wrapper">';
+  let innerHTML = '<ul class="languages-wraper">';
 
   languagesList.forEach(elem => {
     innerHTML += `<li class="swiper-slide bg-color">${elem}</li>`;
   });
 
-  languages.innerHTML += innerHTML;
+  swiper.innerHTML += innerHTML;
 }
 
 renderDescrtiption();
@@ -91,9 +91,10 @@ new Accordion('.description', {
   activeClass: 'svg-flip',
 }).open(0);
 
-new Swiper('.languages', {
+new Swiper('.swiper', {
   modules: [Navigation, Keyboard],
   slidesPerView: 'auto',
+  wrapperClass: 'languages-wraper',
   loop: true,
   keyboard: {
     enabled: true,
@@ -112,6 +113,9 @@ new Swiper('.languages', {
     },
     592: {
       slidesPerView: 4,
+    },
+    722: {
+      slidesPerView: 5,
     },
     768: {
       slidesPerView: 3,
