@@ -22,7 +22,7 @@ imagesProject.forEach((el, indx) => {
   el.previewMob1x = `${IMG_BASE_URL}img-mob/img${indx + 1}`;
   el.previewDesc1x = `${IMG_BASE_URL}img-desk-tab/img${indx + 1}`;
 });
-console.log(imagesProject);
+
 //!=======================================================================
 
 function imgTemplate(img) {
@@ -40,7 +40,7 @@ function imgTemplate(img) {
               </h3>
               <a
                 href="https://github.com/nestertsovv/dream-team-project-js"
-                class="main-btn"
+                class="main-btn btn-mail"
                 target="_blank"
               >
                 <div class="btn-bg bg-color btn-projects"></div>
@@ -100,6 +100,7 @@ const swiper = new Swiper('.mySwiper', {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
+    pageUpDown: false,
   },
   modules: [Navigation, Keyboard],
 });
