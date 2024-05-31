@@ -118,7 +118,7 @@
 .rosy {
   background-color: #e64f79;
 }
-.terracote {
+.terracotte {
   background-color: #9a4360;
 }
 .lilac {
@@ -250,6 +250,7 @@
 }
 @media (hover: none) and (pointer: coarse) {
   .color-selector-btn::before {
+    left: -200px;
     visibility: visible;
     opacity: 0.4;
     font-size: 13.4px;
