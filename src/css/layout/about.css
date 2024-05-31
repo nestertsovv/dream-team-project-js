@@ -84,6 +84,7 @@ span.color-grey {
   flex-direction: column;
   gap: 10px;
   margin-top: 8px;
+  padding-right: 68px;
 }
 
 .description-content li {
