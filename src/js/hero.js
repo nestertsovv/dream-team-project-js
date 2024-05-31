@@ -24,17 +24,9 @@ const classTextColor = '.text-color';
 colorSelectorBtn.addEventListener('click', onSelectorClick);
 
 function onSelectorClick(e) {
-  console.log(colorSelectorBtn.classList);
-
   colorSelectorBtn.classList.add('hidden');
 
-  console.log(colorSelectorBtn.classList);
-
-  console.log(ul.classList);
-
   ul.classList.remove('hidden');
-
-  console.log(ul.classList);
 
   document.addEventListener('mousedown', hideColors);
 }
