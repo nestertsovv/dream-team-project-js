@@ -7,6 +7,7 @@ import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css/bundle';
 
 const description = document.querySelector('.description');
+const languages = document.querySelector('.languages');
 
 const descriptionList = [
   {
@@ -34,10 +35,32 @@ const descriptionList = [
   },
 ];
 
-function init() {
-  descriptionList.forEach(elem => {
-    let innerHTML = '';
+const languagesList = [
+  'HTML/CSS',
+  'JavaScript',
+  'React',
+  'Node. js',
+  'React Native',
+  'Vue .js',
+  'Angular',
+  'Soft skills',
+];
 
+function renderDescrtiption() {
+  let innerHTML = '<ul class="swiper-wrapper">';
+
+  languagesList.forEach(elem => {
+    innerHTML += `<li class="swiper-slide bg-color">${elem}</li>`;
+  });
+
+  languages.innerHTML += innerHTML;
+}
+
+renderDescrtiption();
+
+function renderLanguages() {
+  let innerHTML = '';
+  descriptionList.forEach(elem => {
     innerHTML += `<li class="description-li">
                     <div class="description-item">
                         <h3 class="section-name">${elem.header}</h3>
@@ -55,12 +78,11 @@ function init() {
     innerHTML += `</ul>
                 </div>
             </li>`;
-
-    description.innerHTML += innerHTML;
   });
+  description.innerHTML += innerHTML;
 }
 
-init();
+renderLanguages();
 
 new Accordion('.description', {
   elementClass: 'description-li',
@@ -72,7 +94,6 @@ new Accordion('.description', {
 new Swiper('.languages', {
   modules: [Navigation, Keyboard],
   slidesPerView: 'auto',
-  freeMode: true,
   loop: true,
   keyboard: {
     enabled: true,
