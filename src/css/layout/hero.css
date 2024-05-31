@@ -96,7 +96,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+}
+.color-circles-item {
+  height: 63px;
+  padding: 4px 0;
 }
 .color-circle {
   background: transparent;
@@ -118,7 +121,7 @@
 .rosy {
   background-color: #e64f79;
 }
-.terracotte {
+.terracotta {
   background-color: #9a4360;
 }
 .lilac {
@@ -222,8 +225,9 @@
     bottom: 60px;
     right: 16px;
   }
-  .color-circles {
-    gap: 4px;
+  .color-circles-item {
+    height: 49px;
+    padding: 2px 0;
   }
   .color-selector-btn,
   .color-circle {
