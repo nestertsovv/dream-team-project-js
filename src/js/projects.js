@@ -39,7 +39,7 @@ function imgTemplate(img) {
               </h3>
               <a
                 href="https://github.com/nestertsovv/dream-team-project-js"
-                class="main-btn"
+                class="main-btn btn-mail"
                 target="_blank"
               >
                 <div class="btn-bg bg-color btn-projects"></div>
@@ -99,6 +99,7 @@ const swiper = new Swiper('.mySwiper', {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
+    pageUpDown: false,
   },
   modules: [Navigation, Keyboard],
 });
