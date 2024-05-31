@@ -16,12 +16,17 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   font-family: 'Regular', sans-serif;
   color: var(--text);
   background: var(--bg-main);
+}
+body.is-open {
+  overflow: hidden;
 }
 
 p {
@@ -56,7 +61,7 @@ p {
 }
 
 span.color {
-  color: var(--main-color);
+  color: var(--main-color-text);
 }
 
 .main-btn {
@@ -70,17 +75,22 @@ span.color {
   background: transparent;
   border-radius: 60px;
   padding: 0;
+  cursor: pointer;
 }
 .main-btn .btn-bg {
-  padding: 18px 24px;
+  position: absolute;
   background: var(--main-color);
   border-radius: 60px;
   min-width: 165px;
   cursor: pointer;
+  width: 100%;
+  height: 100%;
   transition: all 0.25s ease;
 }
-.main-btn span {
-  position: absolute;
+.main-btn span,
+.main-btn a {
+  position: relative;
+  padding: 18px 24px;
 }
 
 .main-btn:hover .btn-bg {
@@ -91,8 +101,4 @@ span.color {
   visibility: hidden;
   height: 0;
   width: 0;
-}
-
-.is-open {
-  display: flex;
 }
