@@ -2,7 +2,7 @@ const colorsBG = {
   olive: '#9db425',
   orange: '#fe902b',
   rosy: '#e64f79',
-  terracote: '#9a4360',
+  terracotte: '#9a4360',
   lilac: '#786bcb',
   turquoise: '#005d7c',
 };
@@ -11,7 +11,7 @@ const colorsText = {
   olive: '#acc720',
   orange: '#ff8514',
   rosy: '#f35480',
-  terracote: '#9a4360',
+  terracotte: '#9a4360',
   lilac: '#9679f8',
   turquoise: '#147da1',
 };
