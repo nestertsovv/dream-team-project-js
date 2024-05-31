@@ -17,14 +17,14 @@ async function getComment() {
 function createMarkup(arr) {
   return arr
     .map(obj => {
-      return `<li class=" swiper-slide reviews-item">
+      return `<li class="swiper-slide reviews-item">
     <div class="reviews-list-container">
     <img class ="reviews-image" src="${obj.avatar_url}" 
     alt="picture"/>
         </div>
         <div class= "text-container-img">
-        <h2>${obj.author}</h2>
-        <p class = "text">
+        <h2 class="title-rev">${obj.author}</h2>
+        <p class = "text-rev">
 ${obj.review}
          </p> 
         </div>
