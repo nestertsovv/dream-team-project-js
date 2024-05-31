@@ -47,11 +47,13 @@ const languagesList = [
 ];
 
 function renderDescrtiption() {
-  let innerHTML = '<ul class="languages-wraper">';
+  let innerHTML = '<ul class="swiper-wrapper">';
 
   languagesList.forEach(elem => {
     innerHTML += `<li class="swiper-slide bg-color">${elem}</li>`;
   });
+
+  innerHTML += '</ul>';
 
   swiper.innerHTML += innerHTML;
 }
@@ -94,7 +96,6 @@ new Accordion('.description', {
 new Swiper('.swiper', {
   modules: [Navigation, Keyboard],
   slidesPerView: 'auto',
-  wrapperClass: 'languages-wraper',
   loop: true,
   keyboard: {
     enabled: true,
