@@ -23,8 +23,8 @@
   background: repeating-linear-gradient(
       90deg,
       rgba(127, 127, 127, 0.2) 0px,
-      /* 0% */ rgba(255, 255, 255, 0.1) 1.75%,
-      /* 43% */ rgba(0, 0, 0, 0.2) 2.33%,
+      /* 0% */ rgba(255, 255, 255, 0.07) 1.75%,
+      /* 43% */ rgba(0, 0, 0, 0.15) 2.33%,
       /* 57% */ rgba(127, 127, 127, 0.2) 8.33% /* 100% */
     ),
     linear-gradient(90deg, var(--main-color-text), var(--bg-main) 100%);
@@ -44,8 +44,9 @@ h1.hero-title {
   padding-top: 188px;
   padding-bottom: 330px;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
+      90deg,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.3)
     ),
     var(--main-color-text);
   -webkit-background-clip: text;
@@ -207,7 +208,7 @@ h1.hero-title {
   justify-content: center;
 }
 @media screen and (max-width: 767px) {
-  .hero-title {
+  h1.hero-title {
     font-size: 50px;
     padding-top: 281px;
     padding-bottom: 212px;
