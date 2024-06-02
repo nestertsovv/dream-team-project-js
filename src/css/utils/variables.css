@@ -1,0 +1,28 @@
+:root {
+  /* --main-color: #9db425;
+  --main-color-text: #acc720; */
+  --olive: #9db425;
+  --orange: #fe902b;
+  --rosy: #e64f79;
+  --terracotta: #9a4360;
+  --lilac: #786bcb;
+  --turquoise: #005d7c;
+  /* --red: #ed3b44;
+  --lime: #c6e327;
+  --blue: #0041e8;
+  --tomato: #e6533c;
+  --green: #2b4441;
+  --orange: #ff7f08;
+
+  --red-hover: #e0373f;
+  --lime-hover: #aac322;
+  --blue-hover: #0137be;
+  --tomato-hover: #b64433;
+  --green-hover: #192927;
+  --orange-hover: #cd6809; */
+
+  --bg-main: #1c1d20;
+  --bg-cards: #242527;
+  --bg-arrows: #3b3b3b;
+  --text: #fafafa;
+}

@@ -1,0 +1,125 @@
+/* #region css mobile*/
+#covers {
+  min-height: 504px;
+  background-color: var(--bg-main);
+  background-image: url('../../img/covers/backgrounds/covers-background-mobile-1x-min.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marquee {
+  position: absolute;
+  right: -900px;
+  top: -100px;
+}
+
+.marquee-line {
+  list-style: none;
+  height: 163px;
+  display: flex;
+  margin-bottom: 20px;
+  transform: rotate(16deg);
+}
+
+.marquee-element {
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 282px;
+  white-space: nowrap;
+}
+
+.covers-show {
+  animation-name: marqueeLine;
+  animation-duration: 9s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+/* #endregion css */
+
+/* #region animation */
+
+@keyframes marqueeLine {
+  0% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(-10%);
+  }
+}
+/* #endregion animation */
+
+/* #region media tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  #covers {
+    min-height: 960px;
+    background-image: url('../../img/covers/backgrounds/covers-background-tablet-1x-min.png');
+  }
+
+  .content {
+    min-width: 768px;
+  }
+
+  .marquee {
+    right: -1500px;
+    top: -380px;
+  }
+
+  .marquee-line {
+    height: 314px;
+    margin-bottom: 100px;
+  }
+
+  .marquee-element {
+    width: 544px;
+    margin-right: 60px;
+  }
+}
+
+/* #endregion media tablet */
+
+/* #region media desctop */
+
+@media screen and (min-width: 1440px) {
+  #covers {
+    min-height: 960px;
+    min-width: 1440px;
+    background-image: url('../../img/covers/backgrounds/covers-background-desktop-1x-min.png');
+  }
+
+  .content {
+    min-width: 1440px;
+  }
+
+  .marquee {
+    right: -1130px;
+    top: -405px;
+  }
+
+  .marquee-line {
+    height: 314px;
+    margin-bottom: 100px;
+  }
+  .marquee-element {
+    width: 544px;
+    margin-right: 60px;
+  }
+}
+
+/* #endregion media desctop */
