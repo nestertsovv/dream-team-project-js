@@ -56,7 +56,7 @@ function renderDescrtiption() {
                         <h3 class="section-name">${elem.header}</h3>
                             <button class="description-button">
                                 <svg class="btn-svg" width="20" height="20">
-                                <use href="./img/icons.svg#icon-arrow"></use>
+                                <use href="/img/icons.svg#icon-arrow"></use>
                                 </svg>
                             </button>
                             </div>

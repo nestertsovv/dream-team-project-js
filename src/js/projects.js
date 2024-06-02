@@ -25,6 +25,7 @@ imagesProject.forEach((el, indx) => {
 //!=======================================================================
 
 function imgTemplate(img) {
+  console.log(img);
   return ` <li class="swiper-slide">
           <div class="box-content js-content">
             <div class="box-text">
@@ -49,31 +50,23 @@ function imgTemplate(img) {
             <div class="box-img">
               <picture>
                 <source
-                  media="(min-width: 1378px)"
-                  srcset="
-                    .${img.previewDesc1x}@1x.avif 1x,
-                    .${img.previewDesc1x}@2x.avif 2x
-                  "
-                  type="image/avif"
-                />
-                <source
                   media="(min-width: 768px)"
                   srcset="
-                    .${img.previewDesc1x}@1x.avif 1x,
-                    .${img.previewDesc1x}@2x.avif 2x
+                    ${img.previewDesc1x}@1x.avif 1x,
+                    ${img.previewDesc1x}@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <source
                   media="(max-width: 767px)"
                   srcset="
-                    .${img.previewMob1x}-mob@1x.avif 1x,
-                    .${img.previewMob1x}-mob@2x.avif 2x
+                    ${img.previewMob1x}-mob@1x.avif 1x,
+                    ${img.previewMob1x}-mob@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <img
-                  src=".${img.previewDesc1x}"
+                  src="${img.previewDesc1x}@2x.avif"
                   alt="${img.description}"
                   class="img-projects"
                   loading="lazy"
@@ -87,6 +80,7 @@ function imgTemplate(img) {
 function imgsTemplate(imgs) {
   return imgs.map(imgTemplate).join('');
 }
+
 const markup = imgsTemplate(imagesProject);
 ulElem.innerHTML = markup;
 
