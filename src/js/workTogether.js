@@ -20,9 +20,9 @@ export const messageInput = document.querySelector('.comment-input');
 export const btnEl = document.querySelector('.js-works-btn');
 export const LS_KEY_FORM = 'feedback-form-works';
 export const formElem = document.querySelector('.js-works-form');
-const notificationEl = document.querySelector('#modal-error');
 const validEmail = document.querySelector('.js-small-email');
 const validComment = document.querySelector('.js-small-comment');
+const notificationEl = document.querySelector('#modal-error');
 
 formElem.addEventListener('submit', onSubmit);
 formElem.addEventListener('input', onChangeForm);

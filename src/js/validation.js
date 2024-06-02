@@ -85,26 +85,44 @@ export function onValidationMessage(e) {
 
 export function onSuccess(elem) {
   elem.innerHTML = 'Success!';
-  elem.style.color = '#3cbc81';
-  elem.closest('.small-text').querySelector('.works-input').style[
-    'border-bottom'
-  ] = '1px solid #3cbc81';
+  elem.classList.add('success');
+  elem
+    .closest('.small-text')
+    .querySelector('.works-input')
+    .classList.add('success');
+  elem
+    .closest('.small-text')
+    .querySelector('.works-input')
+    .classList.remove('error');
 }
 
 export function onInvalid(elem) {
   const dataValue = elem.dataset.input;
   elem.innerHTML = `Invalid ${dataValue}, try again!`;
-  elem.style.color = '#e74a3b';
-  elem.closest('.small-text').querySelector('.works-input').style[
-    'border-bottom'
-  ] = '1px solid #e74a3b';
+  elem.classList.add('error');
+  elem
+    .closest('.small-text')
+    .querySelector('.works-input')
+    .classList.add('error');
+  elem
+    .closest('.small-text')
+    .querySelector('.works-input')
+    .classList.remove('success');
 }
 
 export function initValid(elem) {
   elem.innerHTML = '';
-  elem.closest('.small-text').querySelector('.works-input').style[
-    'border-bottom'
-  ] = '1px solid rgba(250, 250, 250, 0.2)';
+  elem.classList.remove('error');
+  elem.classList.remove('success');
+
+  elem
+    .closest('.small-text')
+    .querySelector('.works-input')
+    .classList.remove('success');
+  elem
+    .closest('.small-text')
+    .querySelector('.works-input')
+    .classList.remove('error');
 }
 
 export function renderErrorMessage(error) {
@@ -118,6 +136,11 @@ export function renderErrorMessage(error) {
 export function onClickEmailInput(e) {
   if (document.activeElement === e.target) {
     e.target.value = emailValue;
+    if (regPattern.test(emailValue)) {
+      onSuccess(e.target);
+    } else {
+      onInvalid(e.target);
+    }
   }
 }
 
