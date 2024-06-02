@@ -11,19 +11,22 @@ import {
   renderErrorMessage,
   onClickEmailInput,
   onClickCommentInput,
+  renderPage,
 } from './validation';
 
 export const modalEl = document.querySelector('#modal');
 export const emailInput = document.querySelector('.email-input');
 export const messageInput = document.querySelector('.comment-input');
 export const btnEl = document.querySelector('.js-works-btn');
-const notificationEl = document.querySelector('#modal-error');
-const formElem = document.querySelector('.js-works-form');
+export const LS_KEY_FORM = 'feedback-form-works';
+export const formElem = document.querySelector('.js-works-form');
 const validEmail = document.querySelector('.js-small-email');
 const validComment = document.querySelector('.js-small-comment');
+const notificationEl = document.querySelector('#modal-error');
 
 formElem.addEventListener('submit', onSubmit);
 formElem.addEventListener('input', onChangeForm);
+document.addEventListener('DOMContentLoaded', renderPage);
 
 async function onSubmit(e) {
   e.preventDefault();
@@ -56,13 +59,14 @@ async function onSubmit(e) {
     initValid(validComment);
     emailInput.value = '';
     messageInput.value = '';
+    localStorage.removeItem(LS_KEY_FORM);
     e.target.reset();
   } catch (error) {
     notificationEl.classList.add('is-open');
     notificationEl.innerHTML = renderErrorMessage(error);
     const hideNotification = setTimeout(async () => {
       notificationEl.classList.remove('is-open');
-    }, 2000);
+    }, 5000);
   } finally {
     btnEl.disabled = true;
     emailInput.removeEventListener('click', onClickEmailInput);
