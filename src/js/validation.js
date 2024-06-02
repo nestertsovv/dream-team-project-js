@@ -165,12 +165,13 @@ function onFocusMessage(e) {
 
 export function renderPage() {
   const lsData = localStorage.getItem(LS_KEY_FORM);
+
+  if (!lsData) return;
+
   const result = JSON.parse(lsData);
 
-  if (result.email || result.comment) {
-    formElem.elements.email.value = result.email;
-    formElem.elements.comment.value = result.comment;
-  }
+  formElem.elements.email.value = result.email;
+  formElem.elements.comment.value = result.comment;
 
   if (result.email && result.comment) btnEl.disabled = false;
 }
