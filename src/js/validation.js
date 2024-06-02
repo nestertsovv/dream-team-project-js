@@ -167,9 +167,10 @@ export function renderPage() {
   const lsData = localStorage.getItem(LS_KEY_FORM);
   const result = JSON.parse(lsData);
 
-  if (result) {
+  if (result.email || result.comment) {
     formElem.elements.email.value = result.email;
     formElem.elements.comment.value = result.comment;
-    btnEl.disabled = false;
   }
+
+  if (result.email && result.comment) btnEl.disabled = false;
 }

@@ -76,6 +76,7 @@ function imgTemplate(img) {
                   src=".${img.previewDesc1x}"
                   alt="${img.description}"
                   class="img-projects"
+                  loading="lazy"
                 />
               </picture>
             </div>

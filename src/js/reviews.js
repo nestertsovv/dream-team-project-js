@@ -2,33 +2,31 @@ import axios from 'axios';
 import Swiper from 'swiper';
 import 'swiper/css/navigation';
 import { Navigation, Keyboard } from 'swiper/modules';
+import { getComment } from './api';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import errorSvg from '../img/reviews/error.svg';
 
 const listEl = document.querySelector('.js-swiper-rev');
-document.addEventListener('DOMContentLoaded', renderReviews);
 
-axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
-async function getComment() {
-  return await axios.get('/reviews');
-}
+document.addEventListener('DOMContentLoaded', renderReviews);
 
 function createMarkup(arr) {
   return arr
     .map(obj => {
-      return `<li class="swiper-slide reviews-item">
-    <div class="reviews-list-container">
-    <img class ="reviews-image" src="${obj.avatar_url}" 
-    alt="picture"/>
+      return `
+      <li class="swiper-slide reviews-item">
+        <div class="reviews-list-container">
+          <img class ="reviews-image" src="${obj.avatar_url}" 
+          alt="picture" loading="lazy"/>
         </div>
         <div class= "text-container-img">
-        <h2 class="title-rev">${obj.author}</h2>
-        <p class = "text-rev">
-${obj.review}
-         </p> 
+          <h2 class="title-rev">${obj.author}</h2>
+          <p class = "text-rev">
+            ${obj.review}
+          </p> 
         </div>
-    </li>`;
+      </li>`;
     })
     .join('');
 }

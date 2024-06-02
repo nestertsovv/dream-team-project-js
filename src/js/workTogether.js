@@ -54,17 +54,22 @@ async function onSubmit(e) {
     modalBtn.addEventListener('click', onBtnCloseModal);
     modalEl.addEventListener('click', onBackdropCloseModal);
     document.addEventListener('keydown', onEscCloseModal);
+
     document.body.style.overflow = 'hidden';
+
     initValid(validEmail);
     initValid(validComment);
+
     emailInput.value = '';
     messageInput.value = '';
     btnEl.disabled = true;
+
     localStorage.removeItem(LS_KEY_FORM);
     e.target.reset();
   } catch (error) {
     notificationEl.classList.add('is-open');
     notificationEl.innerHTML = renderErrorMessage(error);
+
     const hideNotification = setTimeout(async () => {
       notificationEl.classList.remove('is-open');
     }, 5000);

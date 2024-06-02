@@ -8,9 +8,6 @@
   right: 0;
   width: 30%;
   height: 100%;
-  background-image: url('../../img/works/background.png');
-  background-size: cover;
-  background-position: center;
   z-index: 1;
 }
 @media only screen and (max-width: 1439px) {

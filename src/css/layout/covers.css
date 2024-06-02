@@ -1,41 +1,43 @@
-/* #region css mobile*/
+/* #region css desktop*/
+
 #covers {
-  min-height: 504px;
+  min-height: 960px;
+  min-width: 1440px;
+  background-image: url('../../img/covers/backgrounds/covers-background-desktop-1x-min.avif');
   background-color: var(--bg-main);
-  background-image: url('../../img/covers/backgrounds/covers-background-mobile-1x-min.png');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
 
 .content {
+  min-width: 1440px;
   position: relative;
-  max-width: 375px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .marquee {
   position: absolute;
-  right: -900px;
-  top: -100px;
+  right: -1130px;
+  top: -405px;
 }
 
 .marquee-line {
-  list-style: none;
-  height: 163px;
   display: flex;
-  margin-bottom: 20px;
+  list-style: none;
+  height: 314px;
+  margin-bottom: 100px;
   transform: rotate(16deg);
 }
 
 .marquee-element {
   flex-shrink: 0;
-  margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 282px;
+  width: 544px;
+  margin-right: 60px;
   white-space: nowrap;
 }
 
@@ -45,7 +47,8 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-/* #endregion css */
+
+/* #endregion css desktop */
 
 /* #region animation */
 
@@ -62,14 +65,16 @@
     transform: translateX(-10%);
   }
 }
+
 /* #endregion animation */
 
 /* #region media tablet */
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   #covers {
     min-height: 960px;
-    background-image: url('../../img/covers/backgrounds/covers-background-tablet-1x-min.png');
+    min-width: 100%;
+    background-image: url('../../img/covers/backgrounds/covers-background-tablet-1x-min.avif');
   }
 
   .content {
@@ -94,32 +99,32 @@
 
 /* #endregion media tablet */
 
-/* #region media desctop */
+/* #region media mobile */
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 767px) {
   #covers {
-    min-height: 960px;
-    min-width: 1440px;
-    background-image: url('../../img/covers/backgrounds/covers-background-desktop-1x-min.png');
+    min-height: 504px;
+    background-image: url('../../img/covers/backgrounds/covers-background-mobile-1x-min.avif');
   }
 
   .content {
-    min-width: 1440px;
+    max-width: 375px;
+    min-width: auto;
   }
 
   .marquee {
-    right: -1130px;
-    top: -405px;
+    right: -900px;
+    top: -100px;
   }
 
   .marquee-line {
-    height: 314px;
-    margin-bottom: 100px;
+    height: 163px;
+    margin-bottom: 20px;
   }
   .marquee-element {
-    width: 544px;
-    margin-right: 60px;
+    width: 282px;
+    margin-right: 10px;
   }
 }
 
-/* #endregion media desctop */
+/* #endregion media mobile */
