@@ -59,6 +59,7 @@ async function onSubmit(e) {
     initValid(validComment);
     emailInput.value = '';
     messageInput.value = '';
+    btnEl.disabled = true;
     localStorage.removeItem(LS_KEY_FORM);
     e.target.reset();
   } catch (error) {
@@ -68,7 +69,6 @@ async function onSubmit(e) {
       notificationEl.classList.remove('is-open');
     }, 5000);
   } finally {
-    btnEl.disabled = true;
     emailInput.removeEventListener('click', onClickEmailInput);
     messageInput.removeEventListener('click', onClickCommentInput);
   }

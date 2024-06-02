@@ -72,7 +72,7 @@ export function onValidationMessage(e) {
     e.target.value = valueNotFocus;
   }
 
-  if (commentValue.length <= 1) {
+  if (commentValue.length < 1) {
     onInvalid(validationMessage);
   } else {
     onSuccess(validationMessage);
