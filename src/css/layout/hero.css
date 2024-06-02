@@ -23,8 +23,8 @@
   background: repeating-linear-gradient(
       90deg,
       rgba(127, 127, 127, 0.2) 0px,
-      /* 0% */ rgba(255, 255, 255, 0.1) 1.75%,
-      /* 43% */ rgba(0, 0, 0, 0.2) 2.33%,
+      /* 0% */ rgba(255, 255, 255, 0.07) 1.75%,
+      /* 43% */ rgba(0, 0, 0, 0.15) 2.33%,
       /* 57% */ rgba(127, 127, 127, 0.2) 8.33% /* 100% */
     ),
     linear-gradient(90deg, var(--main-color-text), var(--bg-main) 100%);
@@ -33,7 +33,7 @@
 }
 /* #endregion BACKGROUND*/
 
-.hero-title {
+h1.hero-title {
   font-weight: 500;
   font-size: 90px;
   line-height: 1;
@@ -43,6 +43,14 @@
 
   padding-top: 188px;
   padding-bottom: 330px;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.3)
+    ),
+    var(--main-color-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* #region SOCIALS AND EMAIL */
@@ -96,7 +104,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+}
+.color-circles-item {
+  height: 63px;
+  padding: 4px 0;
 }
 .color-circle {
   background: transparent;
@@ -118,7 +129,7 @@
 .rosy {
   background-color: #e64f79;
 }
-.terracotte {
+.terracotta {
   background-color: #9a4360;
 }
 .lilac {
@@ -197,7 +208,7 @@
   justify-content: center;
 }
 @media screen and (max-width: 767px) {
-  .hero-title {
+  h1.hero-title {
     font-size: 50px;
     padding-top: 281px;
     padding-bottom: 212px;
@@ -222,8 +233,9 @@
     bottom: 60px;
     right: 16px;
   }
-  .color-circles {
-    gap: 4px;
+  .color-circles-item {
+    height: 49px;
+    padding: 2px 0;
   }
   .color-selector-btn,
   .color-circle {
