@@ -152,6 +152,9 @@ span.color-grey {
   .description {
     margin-top: 64px;
   }
+  .description ul {
+    padding-right: 0;
+  }
   .description-content > ul {
     width: 100%;
   }
@@ -169,9 +172,6 @@ span.color-grey {
 @media screen and (max-width: 767px) {
   .description {
     margin-top: 32px;
-  }
-  .description ul {
-    padding-right: 0;
   }
   .description-li {
     padding: 20px 0;
@@ -216,8 +216,6 @@ span.color-grey {
     height: 130px;
   }
   .languages-next-div {
-    max-width: calc(100% - (130px * 2));
-    min-width: calc(100% - (130px * 2));
     height: 130px;
   }
 }
@@ -237,6 +235,12 @@ span.color-grey {
   .languages-next-div {
     max-width: calc(100% - (130px * 3));
     min-width: calc(100% - (130px * 3));
+  }
+}
+@media screen and (max-width: 462px) {
+  .languages-next-div {
+    max-width: calc(100% - (130px * 2));
+    min-width: calc(100% - (130px * 2));
   }
 }
 @media screen and (max-width: 330px) {
