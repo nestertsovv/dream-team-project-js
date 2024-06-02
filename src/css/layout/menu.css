@@ -31,25 +31,29 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  right: -100%;
-  width: 100%;
+  right: 0;
+  width: 60%;
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
   background: transparent;
-  position: fixed;
   z-index: 100;
-
   flex-direction: column;
   align-items: center;
   justify-content: center;
   display: flex;
-  transition: right 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
 }
+
 .is-open .mob-menu-container {
   right: 0;
+  opacity: 1;
+  width: 100%;
+  visibility: visible;
 }
+
 /* #endregion CONTAINER*/
 
 /* #region MENU LIST */
