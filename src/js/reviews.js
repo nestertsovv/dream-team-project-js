@@ -36,7 +36,13 @@ ${obj.review}
 async function renderReviews() {
   try {
     const response = await getComment();
-    console.log(response.data);
+
+    response.data.forEach(el => {
+      if (el.review.length >= 200) {
+        el.review = el.review.slice(0, 180) + '...';
+      }
+    });
+
     listEl.insertAdjacentHTML('beforeend', createMarkup(response.data));
   } catch (error) {
     iziToast.error({
@@ -59,6 +65,7 @@ const swiper = new Swiper('.revSwiper', {
   simulateTouch: true,
   slidesPerView: 4,
   freeMode: true,
+  spaceBetween: 16,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
