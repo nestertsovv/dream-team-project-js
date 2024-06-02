@@ -39,29 +39,29 @@ function pe(e){return` <li class="swiper-slide">
                 <source
                   media="(min-width: 1378px)"
                   srcset="
-                    ..${e.previewDesc1x}@1x.avif 1x,
-                    ..${e.previewDesc1x}@2x.avif 2x
+                    .${e.previewDesc1x}@1x.avif 1x,
+                    .${e.previewDesc1x}@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ..${e.previewDesc1x}@1x.avif 1x,
-                    ..${e.previewDesc1x}@2x.avif 2x
+                    .${e.previewDesc1x}@1x.avif 1x,
+                    .${e.previewDesc1x}@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <source
                   media="(max-width: 767px)"
                   srcset="
-                    ..${e.previewMob1x}-mob@1x.avif 1x,
-                    ..${e.previewMob1x}-mob@2x.avif 2x
+                    .${e.previewMob1x}-mob@1x.avif 1x,
+                    .${e.previewMob1x}-mob@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <img
-                  src="..${e.previewDesc1x}"
+                  src=".${e.previewDesc1x}"
                   alt="${e.description}"
                   class="img-projects"
                 />
