@@ -3,7 +3,7 @@ import{A as P,S as b,N as S,K as E,a as x,i as R}from"./assets/vendor-ae6388e2.j
                         <h3 class="section-name">${t.header}</h3>
                             <button class="description-button">
                                 <svg class="btn-svg" width="20" height="20">
-                                <use href="../img/icons.svg#icon-arrow"></use>
+                                <use href="./img/icons.svg#icon-arrow"></use>
                                 </svg>
                             </button>
                             </div>
@@ -85,7 +85,7 @@ new b(".mySwiper",{navigation:{nextEl:".js-arrow-r",prevEl:".js-arrow-l"},simula
       </li>`).join("")}async function be(){try{const e=await Z();e.data.forEach(t=>{t.review.length>=180&&(t.review=t.review.slice(0,180)+"...")}),he.insertAdjacentHTML("beforeend",Le(e.data))}catch{R.error({title:"Error",titleColor:"#fff",messageColor:"#fff",iconUrl:ye,message:"Not found!",backgroundColor:"red",position:"topRight"})}}new b(".revSwiper",{navigation:{nextEl:".js-r",prevEl:".js-l"},simulateTouch:!0,slidesPerView:4,freeMode:!0,spaceBetween:16,keyboard:{enabled:!0,onlyInViewport:!0},modules:[S,E],breakpoints:{320:{slidesPerView:1},768:{slidesPerView:2},1440:{slidesPerView:4}}});function Se(e,t){return`<div class="modal-message">
     <button type="button" class="close-modal-btn js-modal-btn">
       <svg class="modal-pict" width="24" height="24">
-        <use href="../img/icons.svg#icon-close"></use>
+        <use href="./img/icons.svg#icon-close"></use>
       </svg>
     </button>
     <h4 class="modal-title">${e}</h4>
