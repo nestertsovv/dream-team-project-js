@@ -38,7 +38,7 @@ async function renderReviews() {
     const response = await getComment();
 
     response.data.forEach(el => {
-      if (el.review.length >= 200) {
+      if (el.review.length >= 180) {
         el.review = el.review.slice(0, 180) + '...';
       }
     });
