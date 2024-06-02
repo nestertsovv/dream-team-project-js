@@ -51,29 +51,29 @@ function imgTemplate(img) {
                 <source
                   media="(min-width: 1378px)"
                   srcset="
-                    ..${img.previewDesc1x}@1x.avif 1x,
-                    ..${img.previewDesc1x}@2x.avif 2x
+                    .${img.previewDesc1x}@1x.avif 1x,
+                    .${img.previewDesc1x}@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ..${img.previewDesc1x}@1x.avif 1x,
-                    ..${img.previewDesc1x}@2x.avif 2x
+                    .${img.previewDesc1x}@1x.avif 1x,
+                    .${img.previewDesc1x}@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <source
                   media="(max-width: 767px)"
                   srcset="
-                    ..${img.previewMob1x}-mob@1x.avif 1x,
-                    ..${img.previewMob1x}-mob@2x.avif 2x
+                    .${img.previewMob1x}-mob@1x.avif 1x,
+                    .${img.previewMob1x}-mob@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <img
-                  src="..${img.previewDesc1x}"
+                  src=".${img.previewDesc1x}"
                   alt="${img.description}"
                   class="img-projects"
                 />
