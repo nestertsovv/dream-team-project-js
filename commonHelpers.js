@@ -3,7 +3,7 @@ import{A as P,S as b,N as S,K as E,a as k,i as R}from"./assets/vendor-ae6388e2.j
                         <h3 class="section-name">${t.header}</h3>
                             <button class="description-button">
                                 <svg class="btn-svg" width="20" height="20">
-                                <use href="../img/icons.svg#icon-arrow"></use>
+                                <use href="img/icons.svg#icon-arrow"></use>
                                 </svg>
                             </button>
                             </div>
