@@ -10,18 +10,6 @@
   height: auto !important;
   margin-bottom: 32px;
   overflow: hidden;
-  /* max-width: 332px; */
-}
-@media only screen and (min-width: 768) {
-  .reviews-item {
-    width: calc((100% - 2 * 16px) / 3);
-    max-width: 332px;
-  }
-}
-@media only screen and (min-width: 1440) {
-  .reviews-item {
-    width: calc((100% - 3 * 16px) / 4);
-  }
 }
 
 .title-rev {
