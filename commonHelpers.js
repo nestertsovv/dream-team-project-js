@@ -3,7 +3,7 @@ import{A as P,S as b,N as S,K as E,a as k,i as R}from"./assets/vendor-ae6388e2.j
                         <h3 class="section-name">${t.header}</h3>
                             <button class="description-button">
                                 <svg class="btn-svg" width="20" height="20">
-                                <use href="img/icons.svg#icon-arrow"></use>
+                                <use href="./img/icons.svg#icon-arrow"></use>
                                 </svg>
                             </button>
                             </div>
@@ -13,7 +13,7 @@ import{A as P,S as b,N as S,K as E,a as k,i as R}from"./assets/vendor-ae6388e2.j
             </li>`}),_.innerHTML+=e}K();new P(".description",{elementClass:"description-li",triggerClass:"description-item",panelClass:"description-content",activeClass:"svg-flip"}).open(0);function W(){let e="";J.forEach(t=>{e+=`<li class="swiper-slide bg-color">${t}</li>`}),z.querySelector("ul").innerHTML+=e}W();new b(".languages-swiper",{modules:[S,E],slidesPerView:6,loop:!0,keyboard:{enabled:!0,onlyInViewport:!0,pageUpDown:!1},navigation:{nextEl:".languages-next-btn"},breakpoints:{320:{slidesPerView:2},462:{slidesPerView:3},592:{slidesPerView:4},722:{slidesPerView:5},768:{slidesPerView:3},1440:{slidesPerView:6}}});k.defaults.baseURL="https://portfolio-js.b.goit.study/api";async function Y(e){return(await k.post("/requests",e)).data}async function Z(){return await k.get("/reviews")}const j=document.querySelectorAll(".marquee-element"),Q=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting)for(const n of j)n.classList.add("covers-show");else for(const n of j)n.classList.remove("covers-show")})},{rootMargin:"-50px"});Q.observe(document.getElementById("covers"));new P(".faq-accordion-container",{showMultiple:!0});const x=document.querySelector(".js-desk-menu"),X=x.querySelector(".js-menu-btn"),L=x.querySelector(".js-menu-list");x.addEventListener("click",ee);function ee(e){if(e.target===X){L.classList.toggle("is-open-menu"),e.stopPropagation(),document.addEventListener("click",A);return}e.target.classList.contains("menu-link")&&L.classList.remove("is-open-menu")}function A(e){e.target.nodeName!=="A"&&(L.classList.remove("is-open-menu"),document.removeEventListener("click",A))}const te=document.querySelector(".js-burger-btn"),oe=document.querySelector(".js-mob-menu");te.addEventListener("click",se);function se(){document.body.classList.add("is-open")}const ne=document.querySelector(".js-cross");ne.addEventListener("click",re);function re(){document.body.classList.remove("is-open")}oe.addEventListener("click",ie);function ie(e){e.target.nodeName==="A"&&document.body.classList.remove("is-open")}const ae="olive",ce={olive:"#9db425",orange:"#fe902b",rosy:"#e64f79",terracotta:"#9a4360",lilac:"#786bcb",turquoise:"#005d7c"},le={olive:"#acc720",orange:"#ff8514",rosy:"#f35480",terracotta:"#9a4360",lilac:"#9679f8",turquoise:"#147da1"},q=document.querySelector(".color-selector-btn"),i=document.querySelector(".color-circles"),de=".bg-color",ue=".text-color";let l=localStorage.getItem("colorTheme")||ae;y(l);q.addEventListener("click",me);function me(e){q.classList.add("hidden"),i.classList.remove("hidden"),document.addEventListener("mousedown",$),i.querySelector(`button[data-color=${l}]`).classList.add("active"),i.addEventListener("click",N),i.addEventListener("mousemove",V),i.addEventListener("mouseout",D)}function $(e){e.target.classList.contains("color-circle")||(i.classList.add("hidden"),q.classList.remove("hidden"),document.removeEventListener("mousedown",$),i.removeEventListener("click",N),i.removeEventListener("mousemove",V),i.removeEventListener("mouseout",D))}function N(e){e.target.nodeName==="BUTTON"&&(l=e.target.dataset.color,i.querySelector(".active").classList.remove("active"),e.target.classList.add("active"),ve(l),y(l))}function y(e){const t=document.querySelectorAll(de),s=document.querySelectorAll(ue);t.forEach(n=>{n.style.setProperty("--main-color",ce[e])}),s.forEach(n=>{n.style.setProperty("--main-color-text",le[e])})}function ve(e){localStorage.setItem("colorTheme",e)}function V(e){const t=e.target.dataset.color;l!==t&&y(t)}function D(e){y(l)}const fe=document.querySelector(".js-swiper"),I="/img/projects/";//!=======================================================================
 const B=[{description:"Window registration, white"},{description:"Pet love , dog"},{description:"Window registration, black"}];//!=======================================================================
 B.forEach((e,t)=>{e.previewMob1x=`${I}img-mob/img${t+1}`,e.previewDesc1x=`${I}img-desk-tab/img${t+1}`});//!=======================================================================
-function pe(e){return console.log(e),` <li class="swiper-slide">
+function pe(e){return` <li class="swiper-slide">
           <div class="box-content js-content">
             <div class="box-text">
               <div class="box-it-text">
@@ -39,21 +39,21 @@ function pe(e){return console.log(e),` <li class="swiper-slide">
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ${e.previewDesc1x}@1x.avif 1x,
-                    ${e.previewDesc1x}@2x.avif 2x
+                    .${e.previewDesc1x}@1x.avif 1x,
+                    .${e.previewDesc1x}@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <source
                   media="(max-width: 767px)"
                   srcset="
-                    ${e.previewMob1x}-mob@1x.avif 1x,
-                    ${e.previewMob1x}-mob@2x.avif 2x
+                    .${e.previewMob1x}-mob@1x.avif 1x,
+                    .${e.previewMob1x}-mob@2x.avif 2x
                   "
                   type="image/avif"
                 />
                 <img
-                  src="${e.previewDesc1x}@2x.avif"
+                  src=".${e.previewDesc1x}@2x.avif"
                   alt="${e.description}"
                   class="img-projects"
                   loading="lazy"
