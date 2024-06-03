@@ -18,13 +18,16 @@ const imagesProject = [
 ];
 
 imagesProject.forEach((el, indx) => {
-  const del = images1x.length / 2;
+  const del = images1x.length / 2 + indx;
 
-  el.previewMob1x = `${images1x[del + indx]}`;
-  el.previewMob2x = `${images2x[del + indx]}`;
+  el.previewMob1x = `${images1x[del]}`;
+  el.previewMob2x = `${images2x[del]}`;
   el.previewDesc1x = `${images1x[indx]}`;
   el.previewDesc2x = `${images2x[indx]}`;
 });
+
+const markup = imgsTemplate(imagesProject);
+ulElem.innerHTML = markup;
 
 function imgTemplate(img) {
   return ` <li class="swiper-slide">
@@ -82,10 +85,6 @@ function imgsTemplate(imgs) {
   return imgs.map(imgTemplate).join('');
 }
 
-const markup = imgsTemplate(imagesProject);
-ulElem.innerHTML = markup;
-
-//!=======================================================================
 const swiper = new Swiper('.mySwiper', {
   navigation: {
     nextEl: '.js-arrow-r',
