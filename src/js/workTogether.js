@@ -43,7 +43,7 @@ async function onSubmit(e) {
     const modalTitle = result.title;
     const modalDescr = result.message;
 
-    const markup = createModal(modalTitle, modalDescr);
+    const markup = await createModal(modalTitle, modalDescr);
 
     modalEl.innerHTML = markup;
 
