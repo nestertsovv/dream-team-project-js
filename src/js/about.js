@@ -4,6 +4,8 @@ import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 
+import arrowDown from '../img/about/arrow-down.svg';
+
 import 'swiper/css/bundle';
 
 const description = document.querySelector('.description');
@@ -48,38 +50,47 @@ const languagesList = [
 
 // Description
 
-function renderDescrtiption() {
+renderDescription();
+
+renderLanguages();
+
+async function renderDescription() {
   let innerHTML = '';
-  descriptionList.forEach(elem => {
+  for (const elem of descriptionList) {
+    let svgData = '';
+    await fetch(arrowDown)
+      .then(response => response.text())
+      .then(data => {
+        svgData = data;
+      });
+
     innerHTML += `<li class="description-li">
                     <div class="description-item">
                         <h3 class="section-name">${elem.header}</h3>
                             <button class="description-button">
-                                <svg class="btn-svg" width="20" height="20">
-                                <use href="./img/icons.svg#icon-arrow"></use>
-                                </svg>
+                            ${svgData}
                             </button>
                             </div>
                             <div class="description-content">
                                 <ul>`;
-    elem.descriptions.forEach(elem => {
-      innerHTML += `<li>${elem}</li>`;
-    });
+
+    for (const description of elem.descriptions) {
+      innerHTML += `<li>${description}</li>`;
+    }
+
     innerHTML += `</ul>
                 </div>
             </li>`;
-  });
+  }
   description.innerHTML += innerHTML;
+
+  new Accordion('.description', {
+    elementClass: 'description-li',
+    triggerClass: 'description-item',
+    panelClass: 'description-content',
+    activeClass: 'svg-flip',
+  }).open(0);
 }
-
-renderDescrtiption();
-
-new Accordion('.description', {
-  elementClass: 'description-li',
-  triggerClass: 'description-item',
-  panelClass: 'description-content',
-  activeClass: 'svg-flip',
-}).open(0);
 
 // Languages
 
@@ -92,8 +103,6 @@ function renderLanguages() {
 
   languagesSwiper.querySelector('ul').innerHTML += innerHTML;
 }
-
-renderLanguages();
 
 new Swiper('.languages-swiper', {
   modules: [Navigation, Keyboard],
