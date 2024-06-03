@@ -1,14 +1,32 @@
 /* #region css desktop*/
-
 #covers {
-  min-height: 960px;
-  min-width: 1440px;
-  background-image: url('../../img/covers/backgrounds/covers-background-desktop-1x-min.avif');
-  background-color: var(--bg-main);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  min-height: 504px;
   overflow: hidden;
+  background-color: rgb(36, 37, 40);
 }
+
+/* #region SPOTS */
+.spot {
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  background: radial-gradient(closest-side, var(--main-color), transparent);
+  opacity: 0.6;
+}
+.spot1 {
+  left: -250px;
+  top: -280px;
+}
+.spot2 {
+  right: -300px;
+  bottom: -320px;
+}
+.spot3 {
+  display: none;
+}
+
+/* #endregion SPOTS */
 
 .content {
   min-width: 1440px;
@@ -68,13 +86,41 @@
 
 /* #endregion animation */
 
+@media screen and (min-width: 1440px) {
+  #covers {
+    min-height: 960px;
+    min-width: 1440px;
+  }
+
+  .spot1 {
+    left: 250px;
+    top: -150px;
+  }
+  .spot2 {
+    left: -150px;
+    top: 50px;
+  }
+  .spot3 {
+    display: block;
+    right: -150px;
+    bottom: -200px;
+  }
+}
+
 /* #region media tablet */
 
 @media screen and (max-width: 1439px) {
   #covers {
     min-height: 960px;
-    min-width: 100%;
-    background-image: url('../../img/covers/backgrounds/covers-background-tablet-1x-min.avif');
+  }
+
+  .spot1 {
+    left: -150px;
+    top: -250px;
+  }
+  .spot2 {
+    right: -300px;
+    bottom: -200px;
   }
 
   .content {
@@ -104,7 +150,6 @@
 @media screen and (max-width: 767px) {
   #covers {
     min-height: 504px;
-    background-image: url('../../img/covers/backgrounds/covers-background-mobile-1x-min.avif');
   }
 
   .content {

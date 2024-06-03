@@ -2,24 +2,6 @@
   position: relative;
   overflow: hidden;
 }
-.background-works {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 100%;
-  z-index: 1;
-}
-@media only screen and (max-width: 1439px) {
-  .background-works {
-    width: 30%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .background-works {
-    width: 20%;
-  }
-}
 .works-wrapper {
   padding: 80px 164px 169px 164px;
   position: relative;

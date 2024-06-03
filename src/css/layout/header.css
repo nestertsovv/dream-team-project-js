@@ -68,13 +68,13 @@ button.menu-btn {
 .burger-btn {
   position: absolute;
   top: -30px;
-  right: -14px;
+  right: 0;
 
   align-items: center;
   justify-content: center;
   border: none;
   background: transparent;
-  padding: 40px;
+  padding: 32px 16px;
 
   display: none;
 }
