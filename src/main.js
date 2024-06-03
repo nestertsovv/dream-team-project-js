@@ -11,3 +11,4 @@ import './js/reviews.js';
 import './js/skills.js';
 import './js/workTogether.js';
 import './js/changeTheme.js';
+import './js/images.js';
