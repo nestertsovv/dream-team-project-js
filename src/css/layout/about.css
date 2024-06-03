@@ -58,6 +58,14 @@ span.color-grey {
   height: 40px;
   padding: 0;
   margin: 0;
+  transition: all 0.3s ease;
+}
+.description-item:hover .section-name {
+  color: #fafafa;
+}
+.description-item:hover .description-button {
+  cursor: pointer;
+  border-color: #fafafa;
 }
 
 .description-button:hover {

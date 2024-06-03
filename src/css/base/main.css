@@ -46,6 +46,7 @@ p {
   line-height: 24px;
   color: rgba(250, 250, 250, 0.4);
   text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 span.color {
@@ -109,6 +110,7 @@ span.color {
   height: 68px;
   stroke: var(--text);
   cursor: pointer;
+  fill: transparent;
   transition: all 0.3s ease;
 }
 .btn-btn.swiper-button-disabled {

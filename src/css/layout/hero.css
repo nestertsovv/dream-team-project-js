@@ -41,8 +41,8 @@ h1.hero-title {
   text-transform: uppercase;
   width: 1150px;
 
-  padding-top: 188px;
-  padding-bottom: 330px;
+  padding-top: 300px;
+  padding-bottom: 225px;
   background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.6),
@@ -211,7 +211,6 @@ h1.hero-title {
 }
 .title-container {
   position: relative;
-  margin: 0, auto;
   display: flex;
   justify-content: center;
 }
