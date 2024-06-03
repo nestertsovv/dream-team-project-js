@@ -1,11 +1,10 @@
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css/navigation';
+import { images1x, images2x } from './images';
 
 const ulElem = document.querySelector('.js-swiper');
-const IMG_BASE_URL = '/img/projects/';
 
-//!=======================================================================
 const imagesProject = [
   {
     description: 'Window registration, white',
@@ -17,12 +16,15 @@ const imagesProject = [
     description: 'Window registration, black',
   },
 ];
-//!=======================================================================
+
 imagesProject.forEach((el, indx) => {
-  el.previewMob1x = `${IMG_BASE_URL}img-mob/img${indx + 1}`;
-  el.previewDesc1x = `${IMG_BASE_URL}img-desk-tab/img${indx + 1}`;
+  const del = images1x.length / 2;
+
+  el.previewMob1x = `${images1x[del + indx]}`;
+  el.previewMob2x = `${images2x[del + indx]}`;
+  el.previewDesc1x = `${images1x[indx]}`;
+  el.previewDesc2x = `${images2x[indx]}`;
 });
-//!=======================================================================
 
 function imgTemplate(img) {
   return ` <li class="swiper-slide">
@@ -51,21 +53,21 @@ function imgTemplate(img) {
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    .${img.previewDesc1x}@1x.avif 1x,
-                    .${img.previewDesc1x}@2x.avif 2x
+                    ${img.previewDesc1x} 1x,
+                    ${img.previewDesc2x} 2x
                   "
                   type="image/avif"
                 />
                 <source
                   media="(max-width: 767px)"
                   srcset="
-                    .${img.previewMob1x}-mob@1x.avif 1x,
-                    .${img.previewMob1x}-mob@2x.avif 2x
+                    ${img.previewMob1x} 1x,
+                    ${img.previewMob2x} 2x
                   "
                   type="image/avif"
                 />
                 <img
-                  src=".${img.previewDesc1x}@2x.avif"
+                  src="${img.previewDesc2x}"
                   alt="${img.description}"
                   class="img-projects"
                   loading="lazy"

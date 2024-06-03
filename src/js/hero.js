@@ -18,8 +18,6 @@ const colorsText = {
   turquoise: '#147da1',
 };
 
-// localStorage.removeItem('colorTheme');
-
 const colorSelectorBtn = document.querySelector('.color-selector-btn');
 const ul = document.querySelector('.color-circles');
 const classBgColor = '.bg-color';
@@ -27,7 +25,9 @@ const classTextColor = '.text-color';
 
 let userColorTheme = localStorage.getItem('colorTheme') || defaultColor;
 
-changeColorTheme(userColorTheme);
+document.addEventListener('DOMContentLoaded', () => {
+  changeColorTheme(userColorTheme);
+});
 
 colorSelectorBtn.addEventListener('click', onSelectorClick);
 
